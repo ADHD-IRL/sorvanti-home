@@ -14,8 +14,6 @@
    a brushed-aluminum hero plate with rivets, anodized graphite cards with a lit top edge, and amber as the single accent.
    Single deliberate dark look. */
 :root {
-  --leaf: #8DB51A; --emerald: #1F9A6E; --forest: #0B4A33; --emerald-text: #5CC99A;
-  --logo-sweep: linear-gradient(90deg, #0B4A33 0%, #1F9A6E 30%, #8DB51A 62%, #F0B000 100%);
   --ground: #121518; --ground-2: #171B1F; --plate: #1E2328; --plate-2: #262C32; --edge: #3A424A; --edge-hi: #59636D;
   --steel: #C9CFD5; --steel-dim: #8D969F; --text: #E8EBEE; --muted: #9AA3AB;
   --amber: #E0A512; --amber-hi: #F4C542; --amber-lo: #A87A08; --amber-text: #F2BC3C;
@@ -192,10 +190,20 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: 
 footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 footer a { text-decoration-color: var(--amber); text-underline-offset: 3px; }
 
-/* logo colors: the mark's forest-emerald-lime-amber sweep as a thin rule, emerald as the second accent */
+/* ---- Sorvanti logo palette: this block is identical on every site ----
+   amber = actions and emphasis · emerald = second accent, alternating items, confirmations
+   forest = logo green on light plates · steel = neutral */
+:root {
+  --amber: #E0A512; --amber-hi: #F4C542; --amber-lo: #A87A08; --amber-text: #F2BC3C;
+  --emerald: #1F9A6E; --emerald-text: #5CC99A; --leaf: #8DB51A; --forest: #0B4A33;
+  --logo-sweep: linear-gradient(90deg, #0B4A33 0%, #1F9A6E 30%, #8DB51A 62%, #F0B000 100%);
+  --progress-sweep: linear-gradient(90deg, var(--emerald), var(--leaf) 55%, var(--amber-hi));
+}
 header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--logo-sweep); opacity: .85; pointer-events: none; }
 .label::before { background: var(--logo-sweep); width: 26px; }
-.handle article:nth-child(3n)::before { background: linear-gradient(90deg, var(--forest), var(--emerald), var(--leaf)); }
+.handle article::before { background: linear-gradient(90deg, var(--amber-lo), var(--amber-hi), var(--amber-lo)); }
+.handle article:nth-child(even)::before { background: linear-gradient(90deg, var(--forest), var(--emerald), var(--leaf)); }
+.inbox li:nth-child(odd) span { color: #FFFFFF; background: linear-gradient(180deg, var(--emerald), var(--forest)); }
 .steps li:nth-child(even)::before { background: linear-gradient(180deg, #B6F0D2, var(--emerald-text) 45%, var(--emerald) 60%, #7FD8AE); -webkit-background-clip: text; background-clip: text; }
 .promise div::before { color: var(--emerald-text); }
 .pkg .kicker { color: var(--emerald-text); }
