@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <title>Sorvanti · Outsourced AI strategy for small businesses</title>
-<meta name="description" content="Sorvanti is the outsourced AI strategy team for small businesses: AI plans, rules for using AI, and tool reviews, without hiring for it.">
+<meta name="description" content="Sorvanti is the outsourced AI strategy team for small businesses: AI plans, rules for using AI, and tool reviews, without hiring for it. Adopt AI. Preserve judgment. Expand what people can do.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Montserrat:wght@600&display=swap">
@@ -208,6 +208,50 @@ header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 
 .promise div::before { color: var(--emerald-text); }
 .pkg .kicker { color: var(--emerald-text); }
 .faq summary::after { color: var(--emerald-text); }
+
+/* ---- Sorvanti tagline: this block is identical on every site ----
+   Adopt AI (steel) · Preserve judgment (amber) · Expand what people can do (emerald) */
+.tagline .t1, .tagline .t2, .tagline .t3 { -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+@media (min-width: 480px) { .tagline .t1, .tagline .t2 { white-space: nowrap; } }
+.tagline .t1 { background-image: linear-gradient(180deg, #FFFFFF 0%, #E4E8EC 38%, #9DA6AF 52%, #D5DADF 64%, #F4F6F8 100%); }
+.tagline .t2 { background-image: linear-gradient(180deg, #FFE9A8 0%, #F4C542 40%, #A87A08 58%, #EDBE45 100%); }
+.tagline .t3 { background-image: linear-gradient(180deg, #B6F0D2 0%, #5CC99A 45%, #1F9A6E 60%, #7FD8AE 100%); }
+footer .tagline { font-family: var(--display); font-weight: 600; font-size: 0.98rem; letter-spacing: -0.005em; margin: 0; }
+
+/* the core idea: what the hours AI gives back are for */
+.head h2.tagline { background: none; color: var(--text); max-width: 22ch; }
+.week, .pillars article { background: linear-gradient(180deg, var(--plate-2) 0%, var(--plate) 100%); border: 1px solid var(--edge); border-radius: 16px; box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 18px 40px -26px rgba(0,0,0,.9); }
+.week { padding: clamp(18px, 3vw, 28px); }
+.week-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; }
+.week-top h3 { font-size: clamp(1.15rem, 1rem + 0.6vw, 1.45rem); line-height: 1.3; max-width: 34ch; color: var(--text); }
+.switch { display: inline-flex; border: 1px solid var(--edge-hi); border-radius: 10px; overflow: hidden; }
+.switch button { font: 600 0.88rem var(--body); color: var(--muted); background: transparent; border: 0; padding: 10px 14px; min-height: 44px; cursor: pointer; }
+.switch button[aria-pressed="true"] { color: #0A2A1C; background: linear-gradient(180deg, var(--amber-hi), var(--amber-lo)); }
+.hrs-label { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--steel-dim); }
+.hrs { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; margin-top: 8px; }
+.hr { min-height: 78px; padding: 8px; border-radius: 8px; border: 1px solid var(--edge); background: var(--ground-2); color: var(--muted); font-size: 0.78rem; line-height: 1.25; display: flex; flex-direction: column; justify-content: space-between; gap: 6px; transition: background .35s ease, color .35s ease, border-color .35s ease; }
+.hr .n { font-family: var(--mono); font-size: 0.66rem; color: var(--steel-dim); }
+.hr.keep { background: var(--plate-2); color: var(--text); border-color: var(--edge-hi); }
+.hr.cut { background: repeating-linear-gradient(135deg, var(--plate) 0 6px, var(--edge) 6px 7px); color: var(--steel-dim); }
+.hr.gain { color: #0A2A1C; border-color: var(--amber-hi); background: linear-gradient(180deg, var(--amber-hi), var(--amber-lo)); font-weight: 600; }
+.hr.gain .n { color: rgba(10,42,28,.7); }
+.ai-strip { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 8px; padding: 8px 12px; border-left: 3px solid var(--emerald); border-radius: 0 8px 8px 0; background: rgba(31,154,110,.1); color: var(--emerald-text); font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.03em; }
+.week-out { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; margin-top: 20px; }
+.week-out .q { font-family: var(--display); font-size: 1.2rem; line-height: 1.35; color: var(--text); }
+.week-out .note { color: var(--muted); font-size: 0.95rem; }
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; margin-top: 16px; }
+.pillars article { padding: 22px; border-top: 3px solid var(--steel-dim); }
+.pillars article:nth-child(2) { border-top-color: var(--amber); }
+.pillars article:nth-child(3) { border-top-color: var(--emerald); }
+.pillars h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.pillars p { color: var(--muted); font-size: 0.95rem; }
+.idea-more { margin-top: 18px; color: var(--muted); font-size: 0.95rem; }
+.idea-more a { color: var(--text); text-decoration-color: var(--amber); text-underline-offset: 3px; }
+@media (max-width: 720px) {
+  .hrs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .week-out { grid-template-columns: 1fr; gap: 10px; }
+  .switch { width: 100%; } .switch button { flex: 1; }
+}
 </style>
 </head>
 <body>
@@ -252,6 +296,38 @@ header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 
         <article><b>“A vendor says their AI will save us hours. Is that true?”</b><p>You need a second opinion from someone who isn't selling anything.</p><p class="fix">Tool review, on request.</p></article>
         <article><b>“I know AI matters. I can't hire someone to own it.”</b><p>You need the thinking of an AI lead without the salary.</p><p class="fix">Ongoing AI strategy, monthly.</p></article>
       </div>
+    </div>
+  </section>
+
+  <section class="band idea" id="idea">
+    <div class="wrap">
+      <div class="head"><span class="label">What we believe</span><h2 class="tagline"><span class="t1">Adopt AI.</span> <span class="t2">Preserve judgment.</span> <span class="t3">Expand what people can do.</span></h2><p>Most AI advice starts with how many hours you can cut. We start with a better question: what should your people do with the time AI gives back?</p></div>
+
+      <div class="week" aria-labelledby="week-title">
+        <div class="week-top">
+          <h3 id="week-title">Your office manager spends a full day each week on quotes, invoices, and follow-ups. AI can take five of those hours.</h3>
+          <div class="switch" role="group" aria-label="Choose a question">
+            <button type="button" id="q-cut" aria-pressed="false">Cut the hours</button>
+            <button type="button" id="q-ours" aria-pressed="true">Our question</button>
+          </div>
+        </div>
+        <div class="hrs-label"><span>Today</span><span>8 hours, all by hand</span></div>
+        <div class="hrs" id="hrs-today"></div>
+        <div class="hrs-label"><span>With AI</span><span id="hrs-meta">3 h judgment · 5 h back</span></div>
+        <div class="ai-strip"><span>AI ▸</span><span>drafts quotes · matches invoices · writes follow-ups, in minutes</span></div>
+        <div class="hrs" id="hrs-ai"></div>
+        <div class="week-out" aria-live="polite">
+          <p class="q" id="week-q"></p>
+          <p class="note" id="week-note"></p>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <article><h3 class="tagline"><span class="t1">Adopt AI.</span></h3><p>Use it on purpose: clear rules, the right tools, and a plan, so AI saves time instead of adding risk.</p></article>
+        <article><h3 class="tagline"><span class="t2">Preserve judgment.</span></h3><p>Decisions about customers, money, and people stay with you. We write down which ones, so AI drafts and suggests but doesn't decide.</p></article>
+        <article><h3 class="tagline"><span class="t3">Expand what people can do.</span></h3><p>The hours AI gives back go to work that grows the business: customers, quality, and the next idea. We help you choose where.</p></article>
+      </div>
+      <p class="idea-more">The same idea drives our work with larger organizations at <a href="https://advisory.sorvantigroup.com/" target="_blank" rel="noopener">Sorvanti Advisory</a> and <a href="https://transformation.sorvantigroup.com/" target="_blank" rel="noopener">Sorvanti Transformation</a>.</p>
     </div>
   </section>
 
@@ -393,6 +469,7 @@ header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 
 <footer>
   <div class="wrap">
     <a class="brand" href="#top"><img src="assets/sorvanti-mark.png" alt="" width="36" height="36"><b>SORVANTI</b></a>
+    <p class="tagline"><span class="t1">Adopt AI.</span> <span class="t2">Preserve judgment.</span> <span class="t3">Expand what people can do.</span></p>
     <nav aria-label="Sorvanti sites"><a href="#packages">Packages</a><a href="https://advisory.sorvantigroup.com" target="_blank" rel="noopener">Advisory</a><a href="https://transformation.sorvantigroup.com" target="_blank" rel="noopener">Transformation</a><a href="#start">Get started</a></nav>
     <span>© 2026 Sorvanti</span>
   </div>
@@ -436,6 +513,42 @@ header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 
       msg.textContent = "Your message didn't send. Check your connection and try again in a moment.";
     }).then(function () { btn.disabled = false; btn.textContent = "Send"; });
   });
+})();
+</script>
+<script>
+(function () {
+  var today = ["Build quotes", "Build quotes", "Chase invoices", "Chase invoices", "Write follow-ups", "Write follow-ups", "Update the spreadsheet", "Answer the same questions"];
+  var keep = ["Check the numbers", "Approve what goes out", "Handle the tricky customer"];
+  var modes = {
+    cut: { meta: "3 h judgment · 5 h cut", cells: ["Hour cut", "Hour cut", "Hour cut", "Hour cut", "Hour cut"], cls: "cut",
+      q: "How many hours can we cut?",
+      note: "A fair question, and sometimes the right answer. But it treats AI as a cost cut and leaves the best part on the table." },
+    ours: { meta: "3 h judgment · 5 h back", cells: ["Call customers who went quiet", "Follow up on open quotes", "Train the new hire", "Fix what causes rework", "Plan next season"], cls: "gain",
+      q: "What should those five hours go to?",
+      note: "Same team, more of the week on work only people can do. And the first three hours stay with a person: checking and approving is the judgment we protect." }
+  };
+  function cell(cls, n, text) {
+    var d = document.createElement("div"); d.className = "hr" + (cls ? " " + cls : "");
+    var s = document.createElement("span"); s.className = "n"; s.textContent = "h" + n;
+    var t = document.createElement("span"); t.textContent = text;
+    d.appendChild(s); d.appendChild(t); return d;
+  }
+  var rowToday = document.getElementById("hrs-today"), rowAi = document.getElementById("hrs-ai");
+  if (!rowToday) return;
+  today.forEach(function (t, i) { rowToday.appendChild(cell("", i + 1, t)); });
+  function set(m) {
+    var md = modes[m]; rowAi.innerHTML = "";
+    keep.forEach(function (t, i) { rowAi.appendChild(cell("keep", i + 1, t)); });
+    md.cells.forEach(function (t, i) { rowAi.appendChild(cell(md.cls, i + 4, t)); });
+    document.getElementById("hrs-meta").textContent = md.meta;
+    document.getElementById("week-q").textContent = md.q;
+    document.getElementById("week-note").textContent = md.note;
+    document.getElementById("q-cut").setAttribute("aria-pressed", m === "cut");
+    document.getElementById("q-ours").setAttribute("aria-pressed", m === "ours");
+  }
+  document.getElementById("q-cut").addEventListener("click", function () { set("cut"); });
+  document.getElementById("q-ours").addEventListener("click", function () { set("ours"); });
+  set("ours");
 })();
 </script>
 </body>
