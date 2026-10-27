@@ -252,9 +252,24 @@ footer .tagline { font-family: var(--display); font-weight: 600; font-size: 0.98
   .week-out { grid-template-columns: 1fr; gap: 10px; }
   .switch { width: 100%; } .switch button { flex: 1; }
 }
+/* Sorvanti sites bar: same pattern on every Sorvanti site */
+.family-bar { border-bottom: 1px solid var(--edge); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.family-bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 34px; }
+.family-label { color: var(--steel-dim); }
+.family-links { display: flex; flex-wrap: wrap; gap: 20px; }
+.family-bar .family-links a { display: inline; padding: 0; border: 0; font-size: inherit; font-weight: inherit; line-height: inherit; color: var(--muted); text-decoration: none; }
+.family-bar .family-links a:hover { color: var(--text, var(--ink)); }
+.family-bar .family-links a[aria-current] { color: var(--amber-text); }
+@media (max-width: 640px) { .family-bar { font-size: 0.65rem; letter-spacing: 0.04em; } .family-label { display: none; } .family-bar .wrap { justify-content: flex-start; } .family-links { gap: 12px; flex-wrap: nowrap; } }
 </style>
 </head>
 <body>
+<nav class="family-bar" aria-label="Sorvanti sites">
+  <div class="wrap">
+    <span class="family-label">Sorvanti Group</span>
+    <span class="family-links"><a href="https://sorvantigroup.com/" aria-current="page">Sorvanti</a><a href="https://advisory.sorvantigroup.com/">Advisory</a><a href="https://transformation.sorvantigroup.com/">Transformation</a><a href="https://countervail.sorvantigroup.com/">Countervail</a></span>
+  </div>
+</nav>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top"><img src="assets/sorvanti-mark.png" alt="" width="36" height="36"><b>SORVANTI</b><i>Your AI strategy team</i></a>
